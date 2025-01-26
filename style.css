@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;;
+}
+
+
+body{
+    height: 100vh;
+    padding-bottom: 10px;
+}
+
+
+nav.menu-lateral{
+    width: 5%;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0px 40px 1%;
+    box-shadow: 3px 0 0 #0070cc;
+    position: fixed;
+    z-index: 999999;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+    
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.lista-menu{
+    height: 100%;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+ul li.item-menu{
+    transition: 1s;
+}
+
+ul li.item-menu:hover{
+    background-color:#0070cc;
+}
+
+ul li.item-menu a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 20px;
+}
+
+ul li.item-menu a .icon i {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.ativo{
+    background-color:#0070cc;
+}
+
+.menu-top{
+    background-color: #202020;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-top ul{
+    position: relative;
+    display: flex;
+    top: 20px;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu-top > ul a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.logo{
+    height: 9%;
+    position: absolute ;
+    left: 90%;
+  
+}
+
+.interface{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Esilo das imagens do slide*/
+
+.slider{
+    height: 100vh;
+    position: relative;
+}
+
+
+.slider .slide-box img{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    left: 15%;
+    object-fit: cover;
+}
+
+ .slide-box{
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.slider .slider-box::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top,#000,transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider .slide-box .texto-slider{
+    position: absolute;
+    top: 83%;
+    color: #fff;
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
+}
+
+.slider .slide-box .texto-slider h2{
+ font-size: 2em;
+ color: #000;
+}
+
+.text-jogos{
+    opacity: 0;
+    display: none;
+}
+
+.text-jogos.select{
+    display: flex;
+}
+
+@keyframes animaTexto {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slider .slide-box.select h2,
+.slider .slide-box.select p{
+    transform: translateY(60px);
+    opacity: 0;
+
+    animation: animaTexto .5s ease-in-out .7s forwards; 
+}
+
+.select{
+    opacity: 1;
+    z-index: 3333;
+}
+
+.slider .slide-box.select h2{
+ animation-delay: 1s;
+}
+
+/*Setas botões*/
+.setas{
+    width: 100%;
+    height: 100%;
+    padding: 0 7%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 2222;
+}
+
+.setas button{
+    width: 40px;
+    height: 40px;
+    font-size: 3em;
+    border: none;
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+
+/*Estilo dos botões de navegação*/
+.btn-nav-box{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 50px;
+    z-index: 8888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-nav-box .btn-nav{
+    width: 30px;
+    height: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.btn-nav-box .btn-nav:hover{
+    background-color: #0070cc
+}
+
+.info-jogos{
+    position: relative;
+     width: 100%;
+     padding: 20px;
+     top: -7%;
+    
+}
+
+.text-jogos{
+    width: 60%;
+    text-align: center;
+    position: relative;
+    left: 20%;
+    line-height: 1.5em;
+
+}
+
+/*Design responsivo*/
+@media only screen and (min-width:320px) and (max-width:480px){
+nav.menu-lateral{
+    width: 13%;
+    height: 100%;
+   
+}
+
+.menu-top ul{
+   display: none;
+}
+
+.logo{
+    left: 50%;
+    top:auto;
+}
+
+.slider .slide-box img{
+    width: 75%;
+    height: 70% ;
+    left: 20%;
+}
+
+.slider .slide-box .texto-slider{
+    position: absolute;
+    top: 93%;
+    left: 17%;
+
+}
+
+.setas{
+    padding: 0 12%;
+
+    position: absolute;
+
+    top: 25%;
+    left: 5%;
+    justify-content: center;
+
+    gap: 20%;
+}
+
+.btn-nav-box{
+    left: 7%;
+    top:80%;
+}
+
+.info-jogos{
+    width: 110%;
+     top:7%;
+     left: 2%;
+    
+}
+}
