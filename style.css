@@ -272,14 +272,16 @@ ul li.item-menu a .icon i {
 /*Design responsivo*/
 @media only screen and (min-width:320px) and (max-width:480px){
 nav.menu-lateral{
-    width: 13%;
+    width: 14%;
     height: 100%;
    
 }
 
 .menu-top ul{
    display: none;
+   width:100%; 
 }
+
 
 .logo{
     left: 50%;
@@ -303,23 +305,28 @@ nav.menu-lateral{
     padding: 0 12%;
 
     position: absolute;
-
+   width: 90%;
     top: 25%;
-    left: 5%;
+    left: 10%;
     justify-content: center;
 
     gap: 20%;
 }
 
 .btn-nav-box{
-    left: 7%;
+    left: 10%;
     top:80%;
+    width: 90%;
 }
 
 .info-jogos{
-    width: 110%;
-     top:7%;
-     left: 2%;
+    width: 85%;
+     top:5%;
+     left: 0;
     
+}
+
+.text-jogos{
+    width: 100%;
 }
 }
