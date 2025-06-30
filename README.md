@@ -2,9 +2,9 @@
 
 
 ## Objetivos 
-- site para treinar responsividade  
+- treinar responsividade  
 
-- Interação com usuario atráves de um carrosel de imagens
+- criação de um carrosel de imagens para dar mais interatividade a pagina
 
 ## Tecnologias utilizadas
 
