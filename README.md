@@ -8,6 +8,6 @@
 
 ## Tecnologias utilizadas
 
-[x] Html
-[x] CSS
-[x] JavaScript
+- Html
+- CSS
+-  JavaScript
